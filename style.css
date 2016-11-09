@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    font-family: Arial;
+}
+.currTable{
+    position: absolute;
+    top: 5vh;
+    left:5vh;
+    border-collapse: collapse;
+}
+
+.cap{
+    font-size:25px;
+    font-style:italic;
+
+}
+
+/*.currTable td{
+    text-align: center;
+    font-weight: bold;
+    width: 8vw;
+    height: 6vh;
+    border: 1px solid blue;
+}*/

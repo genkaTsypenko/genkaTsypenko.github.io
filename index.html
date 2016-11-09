@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="Rate.js"></script>
+    <script src="initials.js"></script>
+    <script src="controller.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<script>
+
+    var currenciesList = ["USD", "EUR", "ILS", "CHF", "GBP", "JPY", "CNY","RUB", "UAH","KZT"];
+    const RESFRESH_INTERVAL = 500;
+
+    makeRatesTable(currenciesList);
+    makeTable(currenciesList);
+    fillRatesArray(currenciesList);
+
+    setInterval(function () {
+        fillRatesArray(currenciesList);
+    }, RESFRESH_INTERVAL);
+
+
+</script>
+</body>
+</html>
