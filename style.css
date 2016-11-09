@@ -2,6 +2,15 @@
     margin: 0;
     font-family: Arial;
 }
+.btn{
+
+}
+.container{
+    position: absolute;
+    top: 5vh;;
+    left: 5vh;
+    right: 5vh;
+}
 .currTable{
     position: absolute;
     top: 5vh;
@@ -10,6 +19,7 @@
 }
 
 .cap{
+    text-align: center;
     font-size:25px;
     font-style:italic;
 

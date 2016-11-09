@@ -16,10 +16,11 @@
 
 </head>
 <body>
+<div class="container"></div>
 <script>
-
+    var container = $(".container");
     var currenciesList = ["USD", "EUR", "ILS", "CHF", "GBP", "JPY", "CNY","RUB", "UAH","KZT"];
-    const RESFRESH_INTERVAL = 500;
+    const RESFRESH_INTERVAL = 1000;
 
     makeRatesTable(currenciesList);
     makeTable(currenciesList);

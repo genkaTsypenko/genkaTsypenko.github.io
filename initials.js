@@ -13,7 +13,6 @@ function makeTable(currenciesList){
     var numCurr = currenciesList.length;
     //table header
     caption =  document.createElement("caption"); // global variable in controller file
-
     caption.className = "cap";
 
 
@@ -27,8 +26,7 @@ function makeTable(currenciesList){
 
     var row = tbl.insertRow();
     var cell = row.insertCell();
-    for (var i= 0; i<numCurr; i++) row.insertCell().innerText =
-        currenciesList[i];
+    for (var i= 0; i<numCurr; i++) row.insertCell().innerText = currenciesList[i];
 
     // body
 
@@ -40,10 +38,10 @@ function makeTable(currenciesList){
 
    var corner = tbl.rows[0].cells[0];
     corner.className = "corner";
-    corner.innerHTML = "<button class='btn'>RFRSH</button>"
+    corner.innerHTML = "<button type='button' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-refresh'></span></button>"
     corner.onclick =  function () {
       fillRatesArray(currenciesList);
     };
 
-    document.body.appendChild(tbl);
+    container.append(tbl);
 }

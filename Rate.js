@@ -5,7 +5,7 @@ function Rate(prev,curr){
     if(RateStatic === undefined) {
         Rate.colorUp = "red";
         Rate.colorDown = "green";
-        Rate.colorSame = "black";
+        Rate.colorSame = "white";
         RateStatic = true;
     }
 

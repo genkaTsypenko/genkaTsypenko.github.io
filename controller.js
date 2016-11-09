@@ -52,16 +52,19 @@ function fillRatesTable() {
 //fill view table with data in ratesTable
 function fillCurrTable(currenciesList) {
     var numCurr = currenciesList.length;
-    var tbl = document.getElementById("cTable");
+   var tbl = document.getElementById("cTable");
+
     for (var i = 1; i <= numCurr; i++) {
-        var row = tbl.rows[i];
+      var row = tbl.rows[i];
+
         for (var j = 1; j <= numCurr; j++){
             var current  = ratesTable[(i - 1) * numCurr + (j - 1)].getCurr();
             var previous = ratesTable[(i - 1) * numCurr + (j - 1)].getPrev();
             row.cells[j].innerText = current;
-            if(parseFloat(current) > parseFloat(previous)) row.cells[j].style.color = Rate.colorUp;
-            else if(parseFloat(current) < parseFloat(previous)) row.cells[j].style.color = Rate.colorDown;
-            else if(parseFloat(current) == parseFloat(previous)) row.cells[j].style.color = Rate.colorSame;
+
+          if(parseFloat(current) > parseFloat(previous)) row.cells[j].style.backgroundColor = Rate.colorUp;
+          else if(parseFloat(current) < parseFloat(previous)) row.cells[j].style.backgroundColor = Rate.colorDown;
+          else if(parseFloat(current) == parseFloat(previous)) row.cells[j].style.backgroundColor = Rate.colorSame;
         }
     }
 
